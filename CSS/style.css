@@ -1,0 +1,667 @@
+@import url(fonts.css);
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+body
+{
+    font-family: "PLayfair";
+    user-select: none;
+}
+
+.container
+{
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title 
+{
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 67px;
+    text-align: center;
+    color: #000000;    
+}
+
+.header__nav
+{
+    padding: 25px 0;
+}
+
+.header__nav .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__icon
+{
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+.header__menu
+{
+    display: flex;
+    column-gap: 40px;
+}
+
+.header__link
+{
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.arrow
+{
+    width: 8px;
+    height: 4px;
+    margin-left: 4px;
+}
+
+.header__input
+{
+    max-width: 180px;
+    width: 100%;
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    border: 1px solid #41A28E;
+}
+
+::placeholder
+{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4B4848;
+}
+
+.header__btn
+{
+    width: 29px;
+    height: 29px;
+    padding: 7px;
+    background: #41A28E;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+}
+
+.header__form
+{
+    display: flex;
+    align-items: center;
+}
+
+.header__menu li
+{
+    position: relative;
+}
+
+.header__menu li:nth-child(3) .header__link:focus~.header__dropdown
+{
+    opacity: 1;
+}
+
+.header__dropdown
+{
+    min-height: 120px;
+    width: 160px;
+    position: absolute;
+    bottom: -130px;
+    left: 0;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    transition: 500ms;
+    opacity: 0;
+    z-index: 999;
+}
+
+.header__dropdown-link:hover
+{
+    background: #41A28E;
+    color: white;
+}
+
+.header__dropdown-link
+{
+    padding: 12px 30px;
+    display: block;
+    border: 1px solid #E5E5E5;
+}
+
+.header__baner
+{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header__baner-img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__title
+{
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 630px;
+    width: 100%;
+    padding: 17px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 67px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.header__desc
+{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29px;
+    color: #FFFFFF;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.38);
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+
+.header__baner-btn
+{
+    width: 131px;
+    padding: 22px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    border: none;
+    text-transform: uppercase;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.header__baner-btn:hover
+{
+    background: #41A28E;
+    color: white;
+}
+
+.main
+{
+    margin-bottom: 72px;
+}
+
+.main__cards
+{
+    margin-top: 48px;
+    margin-bottom: 52px;
+    display: flex;
+    column-gap: 30px;
+}
+
+.main__card:hover .main__span
+{
+    bottom: 0;
+}
+
+.main__card
+{
+    max-width: 255px;
+    width: 100%;
+    min-height: 170px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main__img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main__span
+{
+    display: block;
+    min-height: 37px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+    background: rgba(75, 72, 72, 0.7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    bottom: -37px;
+    width: 100%;
+    transition: 500ms;
+}
+
+.main__title
+{
+    margin-bottom: 18px;
+}
+
+.main__desc
+{
+    max-width: 496px;
+    width: 100%;
+    text-align: center;
+}
+
+.main__content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collection
+{
+    background: url(../img/collection.jpg) no-repeat center / cover fixed;
+    min-height: 404px;
+    display: flex;
+}
+
+.collection .container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.collection__desc
+{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    margin-bottom: 3px;
+}
+
+.collection__title
+{
+    color: white;
+    margin-bottom: 22px;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.collection__btn
+{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding: 23px;
+    border: none;
+    text-transform: uppercase;
+    background: #fff;
+    transition: 500ms;
+}
+
+.collection__btn:hover
+{
+    background: #41A28E;
+    color: #fff;
+}
+
+.cards
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.cards__top
+{
+    margin-bottom: 69px;
+}
+
+.cards__title
+{
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 67px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 18px;
+    text-transform: capitalize;
+}
+
+.cards__desc
+{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #666666;
+    max-width: 496px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cards__bottom
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card
+{
+    max-width: 255px;
+    width: 100%;
+    position: relative;
+}
+
+.card:hover .card__info
+{
+    bottom: 0;
+}
+
+.card__box
+{
+    min-height: 340px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 43px;
+}
+
+.card__img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.card__info
+{
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: absolute;
+    bottom: -47px;
+    width: 100%;
+    transition: 500ms;
+}
+
+.card__left, .card__right
+{
+    display: flex;
+    align-items: center;
+}
+
+.card__right
+{
+    column-gap: 22px;
+}
+
+.card__span
+{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+
+.card__title
+{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29px;
+    color: #000000;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+}
+
+.card__price
+{
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.card__price_color
+{
+    color: #666666;
+    margin-right: 15px;
+    text-decoration: line-through;
+}
+
+.card:nth-child(2) .card__title::after
+{
+    display: block;
+    content: 'OUT OF STOCK';
+    width: 118px;
+    padding: 10px;
+    background: #4B484B;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card:nth-child(4) .card__title::after
+{
+    display: block;
+    content: 'SALE';
+    width: 65px;
+    padding: 10px;
+    background: #4B484B;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.footer__top
+{
+    background: black;
+    padding: 36px 0;
+}
+
+.footer .container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__title
+{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.footer__link
+{
+    display: inline-block;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    margin-bottom: 20px;  
+    transition: 200ms;  
+}
+
+.footer__link:hover
+{
+    color: #41A28E;
+}
+
+.footer__menu li:nth-last-child(1) .footer__link
+{
+    margin-bottom: 0;    
+}
+
+.footer__menu:nth-child(3) li
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer__menu:nth-child(3) li .footer__link
+{
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.footer__icons
+{
+    display: flex;
+}
+
+.footer__icon
+{
+    margin-right: 25px;
+}
+
+.footer__desc
+{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    max-width: 255px;
+    width: 100%;
+    margin-bottom: 20px;    
+}
+
+.footer__form
+{
+    max-width: 255px;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    margin-bottom: 21px;
+}
+
+.footer__form ::placeholder
+{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #919191;
+}
+
+.footer__input
+{
+    outline: none;
+    border: none;
+    width: 200px;
+    padding: 14px 10px;
+}
+
+.footer__btn
+{
+    background: #41A28E;
+    color: #FFF;
+    border: none;
+    padding: 13px 10px;
+    text-align: center;
+}
+
+.footer__bottom
+{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background: #121212;
+}
+
+.footer__bottom span:nth-child(1)
+{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #666666;
+    margin-right: 3px;
+}
+
+.footer__bottom span:nth-child(2)
+{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #666666;
+    text-shadow: 0px 0px 4px #E52D27;
+}
+
